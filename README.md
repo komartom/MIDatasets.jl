@@ -15,7 +15,7 @@ Pkg.clone("https://github.com/komartom/MIDatasets.jl.git")
 ## List of all available datasets
 ```julia
 using MIDatasets
-datasets = list()
+datasets = midatasets()
 ```
 
 ## Load a dataset

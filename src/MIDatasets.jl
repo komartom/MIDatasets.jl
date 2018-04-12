@@ -2,13 +2,13 @@ module MIDatasets
 
 using JLD
 
-export list, midataset
+export midatasets, midataset
 
 
 const DATA_LOCATION = joinpath(dirname(@__FILE__), "..", "data")
 
 
-function list()
+function midatasets()
     [filename[1:end-4] for filename in filter!(r"jld$", readdir(DATA_LOCATION))]
 end
 

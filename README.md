@@ -1,7 +1,38 @@
-# MIDatasets
+# Multiple Instance Datasets (MIDatasets.jl)
 
-[![Build Status](https://travis-ci.org/komartom/MIDatasets.jl.svg?branch=master)](https://travis-ci.org/komartom/MIDatasets.jl)
+Musk1, Musk2, Fox, Tiger, Elephant,...
 
-[![Coverage Status](https://coveralls.io/repos/komartom/MIDatasets.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/komartom/MIDatasets.jl?branch=master)
+Datasets are taken from <http://www.miproblems.org/datasets/>
 
-[![codecov.io](http://codecov.io/github/komartom/MIDatasets.jl/coverage.svg?branch=master)](http://codecov.io/github/komartom/MIDatasets.jl?branch=master)
+The structure of a dataset: Array{Array{Float32,2},1}
+
+## Installation
+You can download datasets using Julia's package manager
+```julia
+Pkg.clone("https://github.com/komartom/MIDatasets.jl.git")
+```
+
+## List of all available datasets
+```julia
+using MIDatasets
+datasets = list()
+```
+
+## Load a dataset
+```julia
+X, y = midataset("Musk1");
+```
+
+## Indexes for cross-validation
+Each dataset also contains indexes of 5-times repeated 10-fold cross-validation for reproducible research
+```julia
+X, y, folds = midataset("Musk1", folds=true);
+
+# Trainig samples and labels for the second fold of the first repetition
+Xtrain = X[folds[1][2]]
+ytrain = y[folds[1][2]]
+
+# Testing samples and labels for the second fold of the first repetition
+Xtest = X[.!folds[1][2]]
+ytest = y[.!folds[1][2]]
+```

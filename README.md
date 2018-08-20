@@ -2,9 +2,9 @@
 
 Musk1, Musk2, Fox, Tiger, Elephant,...
 
-Datasets are taken from <http://www.miproblems.org/datasets/>
+Structure of datasets: Vector{Matrix{Float32}}
 
-The structure of a dataset: Array{Array{Float32,2},1}
+Datasets are taken from <http://www.miproblems.org/datasets/>
 
 ## Installation
 You can download datasets using Julia's package manager

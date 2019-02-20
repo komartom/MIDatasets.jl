@@ -1,15 +1,14 @@
 module MIDatasets
 
-using JLD
+using Printf, JLD
 
 export midatasets, midataset
-
 
 const DATA_LOCATION = joinpath(dirname(@__FILE__), "..", "data")
 
 
 function midatasets()
-    [filename[1:end-4] for filename in filter!(r"jld$", readdir(DATA_LOCATION))]
+    [filename[1:end-4] for filename in filter!(f->occursin(r"jld$", f), readdir(DATA_LOCATION))]
 end
 
 
@@ -18,7 +17,7 @@ function midataset(name::AbstractString; folds=false)
     filename = joinpath(DATA_LOCATION, string(name, ".jld"))
 
     if !isfile(filename)
-        error(@sprintf("Unable to locate dataset %s.", name))
+        error(@sprintf("Unable to locate dataset '%s'", name))
     end
 
     if folds
@@ -29,4 +28,4 @@ function midataset(name::AbstractString; folds=false)
 
 end
 
-end
+end # module

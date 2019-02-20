@@ -1,0 +1,8 @@
+name = "MIDatasets"
+uuid = "1fd8ee00-3501-11e9-0e8e-03538291501c"
+authors = ["Tomas Komarek <komartom@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+JLD = "4138dd39-2aa7-5051-a626-17a0bb65d9c8"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"

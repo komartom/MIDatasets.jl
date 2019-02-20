@@ -1,6 +1,6 @@
 name = "MIDatasets"
 uuid = "1fd8ee00-3501-11e9-0e8e-03538291501c"
-authors = ["Tomas Komarek <komartom@gmail.com>"]
+authors = ["Tomas Komarek"]
 version = "0.1.0"
 
 [deps]

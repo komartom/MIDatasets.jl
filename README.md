@@ -1,4 +1,6 @@
 # Multiple Instance Datasets (MIDatasets.jl)
+[![Build Status](https://travis-ci.org/komartom/MIDatasets.jl.svg?branch=master)](https://travis-ci.org/komartom/MIDatasets.jl)
+[![codecov.io](http://codecov.io/github/komartom/MIDatasets.jl/coverage.svg?branch=master)](http://codecov.io/github/komartom/MIDatasets.jl?branch=master)
 
 Musk1, Musk2, Fox, Tiger, Elephant,...
 

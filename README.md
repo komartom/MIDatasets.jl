@@ -9,7 +9,7 @@ Structure of datasets is Vector{Matrix{Float32}}, where rows of matrices corresp
 ## Installation
 You can download datasets using Julia's package manager
 ```julia
-Pkg.clone("https://github.com/komartom/MIDatasets.jl.git")
+] add https://github.com/komartom/MIDatasets.jl.git
 ```
 
 ## List of all available datasets
